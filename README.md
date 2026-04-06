@@ -120,7 +120,7 @@ Aqui o passo a passo de como executar o projeto.
 
 1. Clone o repositorio
    ```sh
-   git clonehttps://github.com/igor-Ianes/Projeto-Processamento-Grafico
+   git clone https://github.com/igor-Ianes/Projeto-Processamento-Grafico
    ```
 2. Copie a pasta GLFW para a raiz do projeto e abra o projeto na sua IDE favorita
    ```js
@@ -137,35 +137,60 @@ Aqui o passo a passo de como executar o projeto.
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## Uso
 
 Seguem alguns gifs da engine em execução.
 
 ### TEAPOT
 <p float="left">
   <p align="middle">
-  <img src="images/teapot.gif" width="45%" hspace="20"/>
+  <img src="Images/teapot.gif" width="45%" hspace="20"/>
 </p>
 
 ### CUBO
 <p float="left">
   <p align="middle">
-  <img src="images/cubo.png" width="45%" hspace="20"/>
+  <img src="Images/cubo.gif" width="45%" hspace="20"/>
 </p>
 
-### DRAGAO
+### DRAGÕES
 <p float="left">
   <p align="middle">
-  <img src="images/dragao.png" width="45%" hspace="20"/>
+  <img src="Images/dragoes.gif" width="45%" hspace="20"/>
 </p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- CONTRIBUTING -->
-## Contributing
+## Controles
 
+A seguir seguem todos os controles da engine.
 
-### Desenvolvedor:
+* W, A, D, S, F, G - Movimentação da camera.
+* ↑ ↓ ← → - movimentação do objeto selecionado.
+* M, N, B, V - movimentação do objeto selecionado no proprio eixo.
+* 1, 2, 3, 4, -, + Redimensionamento do objeto selecionado.
+* TAB seleciona proximo objeto em loop.
+* Mouse - Movimenta camera e da zoom.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Features:
+o projeto teve como features implementadas:
+
+* Renderização de objetos 3D a partir de um parser de .OBJ
+* Iluminação dinamica
+* movimentação dos objetos em todas as direções
+* Possibilidade de alternar entre os objetos
+* Possibilidade de se movimentar pela cena atraves de 3 cameras
+* Utilização de Shader proprio
+* Possibilidade de redimensionar qualquer objeto
+* Suporte a textura
+* Suporte a rotação e orbita de objetos
+* Suporte a hierarquia nos objetos
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Desenvolvedor:
 * Nome: Igor Ianes
 * RA: 795593
 
