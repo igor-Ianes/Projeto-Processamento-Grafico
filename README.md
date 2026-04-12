@@ -40,40 +40,20 @@
 
 
 <!-- TABLE OF CONTENTS -->
-  <details>
+ <details>
   <summary><strong>Índice</strong></summary>
   <ol>
-    <li>
-      <a href="#sobre-o-projeto">Sobre o Projeto</a>
-      <ul>
-        <li><a href="#construção">Construção</a></li>
-        <li><a href="#objetivos">Objetivos</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#pré-requisitos">Pré-requisitos</a>
-    </li>
-    <li>
-      <a href="#execução">Execução</a>
-    </li>
-    <li>
-      <a href="#uso">Uso</a>
-    </li>
-    <li>
-      <a href="#controles">Controles</a>
-    </li>
-    <li>
-      <a href="#features">Features</a>
-    </li>
-    <li>
-      <a href="#desenvolvedor">Desenvolvedor</a>
-    </li>
-    <li>
-      <a href="#license">Licença</a>
-    </li>
-    <li>
-      <a href="#contact">Contato</a>
-    </li>
+    <li><a href="#sobre-o-projeto">Sobre o Projeto</a></li>
+    <li><a href="#ferramentas">Ferramentas</a></li>
+    <li><a href="#objetivos">Objetivos</a></li>
+    <li><a href="#pré-requisitos">Pré-requisitos</a></li>
+    <li><a href="#execução">Execução</a></li>
+    <li><a href="#uso">Uso</a></li>
+    <li><a href="#controles">Controles</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#desenvolvedor">Desenvolvedor</a></li>
+    <li><a href="#license">Licença</a></li>
+    <li><a href="#contact">Contato</a></li>
   </ol>
 </details>
 
@@ -84,8 +64,7 @@ Este projeto foi desenvolvido com o objetivo de aplicar os conceitos estudados n
 O projeto foi realizado utilizando o GitHub para documentação das alterações realizadas.
 
 
-
-## Construção
+## Ferramentas
 
 Essa seção lista as principais ferramentas utilizadas no desenvolvimento do projeto.
 
@@ -94,7 +73,6 @@ Essa seção lista as principais ferramentas utilizadas no desenvolvimento do pr
 * ![Vscode](https://img.shields.io/badge/Vscode-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 * [![Git][Git.com]][Git-url]
 * [![Linux][Linux.com]][Linux-url]
-
 
 ## Objetivos
 
@@ -108,8 +86,9 @@ Desenvolver uma cena 3D funcional implementando conceitos fundamentais de comput
 * Redimencionamento
 
 
+<a id="pre-requisitos"></a>
+## Pré requisitos
 
-## Pré requesitos
 
 O ambiente é bem simples,
  Primeiro, você precisa de um compilador de C/C++ na sua maquina para a compilação do projeto, sendo recomendado o GCC. Se voce nao tem certeza se ja tem o compilador instalado pode executar o seguinte comando.
