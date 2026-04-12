@@ -3,7 +3,7 @@
 
 #include "Manager.hpp"
 
-int main(int argc, char *argv[])
+int main()
 {
     Manager *engine = Manager::Instance();
 
