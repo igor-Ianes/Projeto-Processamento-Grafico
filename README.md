@@ -249,8 +249,7 @@ Distribuição sob a licença MIT. Veja `LICENSE.txt` para maiores informações
 <!-- CONTACT -->
 ## Contact
 
-[![Gmail Badge](https://img.shields.io/badge/-Gmail-006bed?style=flat-square&logo=Gmail&logoColor=white&link=mailto:igor.ianes@estudante.ufscar.br)](mailto:igor.ianes@estudante.ufscar.br)
-
+[![Gmail](https://img.shields.io/badge/Gmail-006bed?style=flat-square&logo=gmail&logoColor=white)](https://mail.google.com/mail/?view=cm&to=igor.ianes@estudante.ufscar.br)
 
 Project Link: [https://github.com/igor-Ianes/Projeto-Processamento-Grafico](https://github.com/igor-Ianes/Projeto-Processamento-Grafico)
 
