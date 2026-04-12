@@ -1,43 +1,20 @@
 # Projeto-Processamento-Grafico
 
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a id="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
 
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 [![Contributors][contributors-shield]][contributors-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 
 <!-- PROJECT LOGO -->
-</div>
-
 <div align="center">
-  <div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
-    <img src="Images/OpenglLogo.png" style="height: 80px; object-fit: contain;">
-    <img src="Images/GLFWlogo.png" style="height: 80px; object-fit: contain;">
-  </div>
+  <img src="Images/OpenglLogo.png" height="80">
+  <img src="Images/GLFWlogo.png" height="80">
+
 
 </div>
 
 </div>
-
-
-
 
 <!-- TABLE OF CONTENTS -->
  <details>
@@ -52,8 +29,8 @@
     <li><a href="#controles">Controles</a></li>
     <li><a href="#features">Features</a></li>
     <li><a href="#desenvolvedor">Desenvolvedor</a></li>
-    <li><a href="#license">Licença</a></li>
-    <li><a href="#contact">Contato</a></li>
+    <li><a href="#licença">Licença</a></li>
+    <li><a href="#contato">Contato</a></li>
   </ol>
 </details>
 
@@ -89,15 +66,16 @@ Desenvolver uma cena 3D funcional implementando conceitos fundamentais de comput
 <a id="pre-requisitos"></a>
 ## Pré requisitos
 
+Antes de começar, você precisará de:
 
-O ambiente é bem simples,
- Primeiro, você precisa de um compilador de C/C++ na sua maquina para a compilação do projeto, sendo recomendado o GCC. Se voce nao tem certeza se ja tem o compilador instalado pode executar o seguinte comando.
-* GCC
+- Compilador C/C++ (recomendado: GCC)
+
+Verifique se já possui instalado:
   ```sh
   gcc –version
   ```
 
-Em seguida, é necessario baixar a bibliioteca GLFW, e apos a extracao do arquivo, copiar a pasta GLFW para o repositorio Projeto.
+Em seguida, é necessario baixar a biblioteca GLFW, e apos a extracao do arquivo, copiar a pasta GLFW para o repositório Projeto.
 * LINK
   ```sh
   https://www.glfw.org/download
@@ -111,7 +89,7 @@ Aqui o passo a passo de como executar o projeto.
    ```sh
    git clone https://github.com/igor-Ianes/Projeto-Processamento-Grafico
    ```
-2. Copie a pasta GLFW no repositorio projeto e abra o projeto na sua IDE favorita
+2. Dentro da pasta Projeto cole a pasta GLFW. 
    ```js
    cd projeto
    ```
@@ -169,47 +147,44 @@ Aqui o passo a passo de como executar o projeto.
 
 4. execute o  `MAKEFILE` com o seguinte comando.
    ```js
-   MAKE all
+   make all
    ```
 
 
-
-
-
-<!-- USAGE EXAMPLES -->
 ## Uso
 
-Seguem alguns gifs da engine em execução.
+Alguns exemplos da engine em execução:
 
-### TEAPOT
-<p float="left">
-  <p align="middle">
-  <img src="Images/teapot.gif" width="45%" hspace="20"/>
+### Demonstrações básicas
+<p align="center">
+  <img src="Images/teapot.gif" width="40%" />
+  <img src="Images/cubo.gif" width="40%" />
 </p>
+<p align="center"><em>Teapot e cubo renderizados pela engine</em></p>
 
-### CUBO
-<p float="left">
-  <p align="middle">
-  <img src="Images/cubo.gif" width="45%" hspace="20"/>
+### Cena dos Dragões
+<p align="center">
+  <img src="Images/dragoes.gif" width="60%" />
 </p>
+<p align="center"><em>Cena completa com múltiplos dragões</em></p>
 
-### DRAGÕES
-<p float="left">
-  <p align="middle">
-  <img src="Images/dragoes.gif" width="45%" hspace="20"/>
+### Transformações (Cena dos Dragões)
+<p align="center">
+  <img src="Images/demonstracaoRedimensionamento.gif" width="40%" />
+  <img src="Images/demonstracaoGiroGit.gif" width="40%" />
 </p>
-
+<p align="center"><em>Demonstrações de escala e rotação aplicadas à cena</em></p>
 
 ## Controles
 
 A seguir seguem todos os controles da engine.
 
-* W, A, D, S, F, G - Movimentação da camera.
-* ↑ ↓ ← → - movimentação do objeto selecionado.
-* M, N, B, V - movimentação do objeto selecionado no proprio eixo.
-* 1, 2, 3, 4, -, + Redimensionamento do objeto selecionado.
-* TAB seleciona proximo objeto em loop.
-* Mouse - Movimenta camera e da zoom.
+- `W, A, D, S, F, G`: Movimentação da camera.
+- `↑ ↓ ← →`: movimentação do objeto selecionado.
+- `M, N, B, V`: movimentação do objeto selecionado no proprio eixo.
+- `1, 2, 3, 4, -, +`: Redimensionamento do objeto selecionado.
+- `TAB` seleciona proximo objeto em loop.
+- `Mouse`: Movimenta camera e da zoom.
 
 
 ## Features:
@@ -220,12 +195,75 @@ o projeto teve como features implementadas:
 * movimentação dos objetos em todas as direções
 * Possibilidade de alternar entre os objetos
 * Possibilidade de se movimentar pela cena atraves de 3 cameras
-* Utilização de Shader proprio
+* Utilização de Shader próprio
 * Possibilidade de redimensionar qualquer objeto
 * Suporte a textura
 * Suporte a rotação e orbita de objetos
 * Suporte a hierarquia nos objetos
 
+### Shaders
+
+#### Vertex Shader
+   ```cpp
+   const char *vs = "#version 330 core\n"
+                     "layout (location = 0) in vec3 aPos;\n"
+                     "layout (location = 1) in vec3 aNormal;\n"
+                     "layout (location = 2) in vec2 aTex;\n"
+                     "\n"
+                     "out vec2 TexCoord;\n"
+                     "out vec3 Normal;\n"
+                     "out vec3 FragPos;\n"
+                     "\n"
+                     "uniform mat4 mvp;\n"
+                     "uniform mat4 model;\n"
+                     "\n"
+                     "void main()\n"
+                     "{\n"
+                     "    vec4 worldPos = model * vec4(aPos, 1.0);\n"
+                     "    FragPos = worldPos.xyz;\n"
+                     "\n"
+                     "    Normal = mat3(transpose(inverse(model))) * aNormal;\n"
+                     "    TexCoord = aTex;\n"
+                     "\n"
+                     "    gl_Position = mvp * vec4(aPos, 1.0);\n"
+                     "}";
+   ```
+#### Fragment Shader
+   ```sh
+   const char *fs = "#version 330 core\n"
+                     "in vec2 TexCoord;\n"
+                     "in vec3 Normal;\n"
+                     "in vec3 FragPos;\n"
+                     "\n"
+                     "out vec4 FragColor;\n"
+                     "\n"
+                     "uniform sampler2D texture1;\n"
+                     "uniform bool useTexture;\n"
+                     "uniform vec3 objColor;\n"
+                     "uniform vec3 lightDir;\n"
+                     "\n"
+                     "void main()\n"
+                     "{\n"
+                     "    vec3 baseColor;\n"
+                     "\n"
+                     "    if (useTexture)\n"
+                     "        baseColor = texture(texture1, TexCoord).rgb;\n"
+                     "    else\n"
+                     "        baseColor = objColor;\n"
+                     "\n"
+                     "    vec3 norm = normalize(Normal);\n"
+                     "    vec3 light = normalize(lightDir);\n"
+                     "\n"
+                     "    float diff = max(dot(norm, light), 0.1);\n"
+                     "\n"
+                     "    vec3 ambient = baseColor * 0.2;\n"
+                     "    vec3 diffuse = baseColor * diff;\n"
+                     "\n"
+                     "    vec3 result = ambient + diffuse;\n"
+                     "\n"
+                     "    FragColor = vec4(result, 1.0);\n"
+                     "}";
+   ```
 
 
 ## Desenvolvedor:
@@ -238,7 +276,7 @@ o projeto teve como features implementadas:
 
 
 <!-- LICENSE -->
-## License
+## Licença
 
 Distribuição sob a licença MIT. Veja `LICENSE.txt` para maiores informações.
 
@@ -247,7 +285,7 @@ Distribuição sob a licença MIT. Veja `LICENSE.txt` para maiores informações
 
 
 <!-- CONTACT -->
-## Contact
+## Contato
 
 [![Gmail](https://img.shields.io/badge/Gmail-006bed?style=flat-square&logo=gmail&logoColor=white)](https://mail.google.com/mail/?view=cm&to=igor.ianes@estudante.ufscar.br)
 
