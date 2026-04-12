@@ -40,31 +40,42 @@
 
 
 <!-- TABLE OF CONTENTS -->
-<details>
-  <summary>indice</summary>
+  <details>
+  <summary><strong>Índice</strong></summary>
   <ol>
     <li>
-      <a href="#about-the-project">Sobre o projeto</a>
+      <a href="#sobre-o-projeto">Sobre o Projeto</a>
       <ul>
-        <li><a href="#built-with">Construção</a></li>
+        <li><a href="#construção">Construção</a></li>
+        <li><a href="#objetivos">Objetivos</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Como usar</a>
-      <ul>
-        <li><a href="#prerequisites">Pré requesitos</a></li>
-        <li><a href="#installation">instalação</a></li>
-      </ul>
+      <a href="#pré-requisitos">Pré-requisitos</a>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li>
+      <a href="#execução">Execução</a>
+    </li>
+    <li>
+      <a href="#uso">Uso</a>
+    </li>
+    <li>
+      <a href="#controles">Controles</a>
+    </li>
+    <li>
+      <a href="#features">Features</a>
+    </li>
+    <li>
+      <a href="#desenvolvedor">Desenvolvedor</a>
+    </li>
+    <li>
+      <a href="#license">Licença</a>
+    </li>
+    <li>
+      <a href="#contact">Contato</a>
+    </li>
   </ol>
 </details>
-
-
 
 <!-- ABOUT THE PROJECT -->
 ## Sobre o projeto
@@ -72,7 +83,7 @@
 Este projeto foi desenvolvido com o objetivo de aplicar os conceitos estudados na disciplina de Processamento Gráfico, através da criação e visualização de uma cena 3D interativa.
 O projeto foi realizado utilizando o GitHub para documentação das alterações realizadas.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ## Construção
 
@@ -84,7 +95,6 @@ Essa seção lista as principais ferramentas utilizadas no desenvolvimento do pr
 * [![Git][Git.com]][Git-url]
 * [![Linux][Linux.com]][Linux-url]
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Objetivos
 
@@ -97,7 +107,7 @@ Desenvolver uma cena 3D funcional implementando conceitos fundamentais de comput
 * Animação básica
 * Redimencionamento
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ## Pré requesitos
 
@@ -108,7 +118,7 @@ O ambiente é bem simples,
   gcc –version
   ```
 
-Em seguida, é necessario baixar a bibliioteca GLFW, e apos a extracao do arquivo, copiar a pasta GLFW para a raiz do projeto.
+Em seguida, é necessario baixar a bibliioteca GLFW, e apos a extracao do arquivo, copiar a pasta GLFW para o repositorio Projeto.
 * LINK
   ```sh
   https://www.glfw.org/download
@@ -122,17 +132,68 @@ Aqui o passo a passo de como executar o projeto.
    ```sh
    git clone https://github.com/igor-Ianes/Projeto-Processamento-Grafico
    ```
-2. Copie a pasta GLFW para a raiz do projeto e abra o projeto na sua IDE favorita
+2. Copie a pasta GLFW no repositorio projeto e abra o projeto na sua IDE favorita
    ```js
    cd projeto
    ```
+3. A estrutura final do projeto deve ser esta.
+   ```js
+    Projeto/
+    ├── Assets/
+    │   ├── TextureDragon.png
+    │   ├── AsaEsquerda.obj
+    │   ├── AsaDireita.obj
+    │   ├── MontanhaNeve.obj
+    │   └── Grama.jpg
+    │   
+    ├── GLFW/ 
+    │   └── ...
+    │   
+    ├── Graficos3d/
+    │   ├── Headers/
+    │   │   ├── Framework/
+    │   │   │   ├── Graphics.hpp
+    │   │   │   ├── InputManager.hpp
+    │   │   │   ├── Manager.hpp
+    │   │   │   ├── MathHelper.hpp
+    │   │   │   ├── stb_Image.hpp
+    │   │   │   ├── TextureManager.hpp
+    │   │   │   └── Timer.hpp
+    │   │   │ 
+    │   │   └── Engine/
+    │   │       ├── Camera.hpp
+    │   │       ├── Graphics3d.hpp
+    │   │       ├── Math3d.hpp
+    │   │       ├── Mesh.hpp
+    │   │       ├── Object3D.hpp
+    │   │       ├── OpenGL.hpp
+    │   │       ├── Renderer3D.hpp
+    │   │       ├── Scene.hpp
+    │   │       └── Shader.hpp
+    │   │
+    │   └── Source/
+    │       ├── Engine/
+    │       │   ├── Graphics3d.cpp
+    │       │   ├── Math3d.cpp
+    │       │   ├── Renderer3D.cpp
+    │       │   ├── Scene.cpp
+    │       │   └── Shader.cpp
+    │       └── Framework/
+    │       │   ├── Graphics.cpp
+    │       │   ├── InputManager.cpp
+    │       │   ├── Manager.cpp
+    │       │   ├── TextureManager.cpp
+    │       │   └── Timer.cpp
+    │       └── main.cpp
+    └── MAKEFILE
+   ```
 
-3. execute o  `MAKEFILE` com o seguinte comando.
+4. execute o  `MAKEFILE` com o seguinte comando.
    ```js
    MAKE all
    ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 
@@ -159,7 +220,6 @@ Seguem alguns gifs da engine em execução.
   <img src="Images/dragoes.gif" width="45%" hspace="20"/>
 </p>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Controles
 
@@ -172,13 +232,12 @@ A seguir seguem todos os controles da engine.
 * TAB seleciona proximo objeto em loop.
 * Mouse - Movimenta camera e da zoom.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Features:
 o projeto teve como features implementadas:
 
 * Renderização de objetos 3D a partir de um parser de .OBJ
-* Iluminação dinamica
+* Iluminação basica
 * movimentação dos objetos em todas as direções
 * Possibilidade de alternar entre os objetos
 * Possibilidade de se movimentar pela cena atraves de 3 cameras
@@ -188,14 +247,14 @@ o projeto teve como features implementadas:
 * Suporte a rotação e orbita de objetos
 * Suporte a hierarquia nos objetos
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ## Desenvolvedor:
 * Nome: Igor Ianes
 * RA: 795593
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 
@@ -204,7 +263,7 @@ o projeto teve como features implementadas:
 
 Distribuição sob a licença MIT. Veja `LICENSE.txt` para maiores informações.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 
