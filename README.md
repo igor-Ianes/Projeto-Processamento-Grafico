@@ -105,7 +105,10 @@ Aqui o passo a passo de como executar o projeto.
     │   
     ├── GLFW/ 
     │   └── ...
-    │   
+    │
+    ├── Glads/ 
+    │   └── ...
+    │
     ├── Graficos3d/
     │   ├── Headers/
     │   │   ├── Framework/
