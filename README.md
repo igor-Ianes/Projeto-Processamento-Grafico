@@ -186,7 +186,8 @@ A seguir seguem todos os controles da engine.
 - `↑ ↓ ← →`: movimentação do objeto selecionado.
 - `M, N, B, V`: movimentação do objeto selecionado no proprio eixo.
 - `1, 2, 3, 4, -, +`: Redimensionamento do objeto selecionado.
-- `TAB` seleciona proximo objeto em loop.
+- `TAB`: seleciona proximo objeto em loop.
+- `C`: troca de camera.
 - `Mouse`: Movimenta camera e da zoom.
 
 
