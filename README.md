@@ -75,11 +75,31 @@ Verifique se já possui instalado:
   gcc –version
   ```
 
-Em seguida, é necessario baixar a biblioteca GLFW, e apos a extracao do arquivo, copiar a pasta GLFW para o repositório Projeto.
-* LINK
-  ```sh
-  https://www.glfw.org/download
-  ```
+### 📦 Dependências
+
+#### 🪟 Windows (MinGW)
+
+É necessário baixar manualmente a biblioteca GLFW:
+
+https://www.glfw.org/download
+
+Após o download:
+
+1. Extraia o arquivo  
+2. Copie a pasta `GLFW.3.4` para dentro do diretório `GLFW` do projeto  
+
+---
+
+#### 🐧 Linux (Ubuntu/Debian)
+
+No Linux, não é necessário baixar o GLFW manualmente.
+
+Instale as dependências com:
+
+```sh
+sudo apt update
+sudo apt install libglfw3-dev libgl1-mesa-dev
+```
 
 ### Execução
 
@@ -89,7 +109,7 @@ Aqui o passo a passo de como executar o projeto.
    ```sh
    git clone https://github.com/igor-Ianes/Projeto-Processamento-Grafico
    ```
-2. Dentro da pasta Projeto cole a pasta GLFW. 
+2. Dentro da pasta Projeto cole a pasta GLFW.3.4 na pasta GLFW (Apenas Windows). 
    ```js
    cd projeto
    ```
@@ -103,10 +123,11 @@ Aqui o passo a passo de como executar o projeto.
     │   ├── MontanhaNeve.obj
     │   └── Grama.jpg
     │   
-    ├── GLFW/ 
-    │   └── ...
+    ├── GLFW/
+    │   └── Glfw-3.4/
+    │       └── ...
     │
-    ├── Glads/ 
+    ├── Glad/ 
     │   └── ...
     │
     ├── Graficos3d/
