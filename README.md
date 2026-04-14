@@ -75,7 +75,7 @@ Verifique se já possui instalado:
   gcc –version
   ```
 
-### 📦 Dependências
+### Dependências
 
 #### 🪟 Windows (MinGW)
 
