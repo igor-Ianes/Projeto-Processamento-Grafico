@@ -146,7 +146,7 @@ void Graphics3d::Init(InputManager *in, Timer *t)
     GLuint tex = TextureManager::LoadTexture("Assets/TextureDragon.png");
     GLuint tex2 = TextureManager::LoadTexture("Assets/TextureDragonBlue.png");
     GLuint tex3 = TextureManager::LoadTexture("Assets/TextureDragonGreen.png");
-    GLuint tex4 = TextureManager::LoadTexture("Assets/grama.jpg");
+    GLuint tex4 = TextureManager::LoadTexture("Assets/grama.JPG");
 
     if (tex == 0)
         std::cout << "FALHA AO CARREGAR TEXTURA\n";
