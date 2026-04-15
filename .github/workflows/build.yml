@@ -22,7 +22,7 @@ jobs:
           libxi-dev \
           libxrandr-dev \
           libxinerama-dev \
-          libxcursor-dev
+          libxcursor-dev \
           xvfb
 
       - name: Compilar projeto
