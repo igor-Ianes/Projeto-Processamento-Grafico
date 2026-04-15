@@ -23,6 +23,12 @@ jobs:
           libxrandr-dev \
           libxinerama-dev \
           libxcursor-dev
+          xvfb
 
       - name: Compilar projeto
         run: make -C Projeto
+        
+      - name: Rodar programa (detectar segfault)
+        run: |
+          cd Projeto
+          timeout 5s xvfb-run -a ./programa
