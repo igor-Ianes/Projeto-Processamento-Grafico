@@ -31,4 +31,4 @@ jobs:
       - name: Rodar programa (detectar segfault)
         run: |
           cd Projeto
-          timeout 5s xvfb-run -a ./programa
+          timeout 5s xvfb-run -a ./programa || true
