@@ -98,7 +98,7 @@ Instale as dependências com:
 
 ```sh
 sudo apt update
-sudo apt install libglfw3-dev libgl1-mesa-dev
+sudo apt install libglfw3-dev libgl1-mesa-dev libxi-dev
 ```
 
 ### Execução
