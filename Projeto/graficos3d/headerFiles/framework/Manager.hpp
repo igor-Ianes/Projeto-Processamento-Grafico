@@ -3,7 +3,7 @@
 
 #include "Graphics.hpp"
 #include "InputManager.hpp"
-#include "Graphics3d.hpp"
+#include "graphics3d.hpp"
 #include "Renderer3D.hpp"
 #include "Timer.hpp"
 
