@@ -18,4 +18,4 @@ jobs:
           sudo apt install -y build-essential libglfw3-dev libgl1-mesa-dev
 
       - name: Compilar projeto
-        run: make
+        run: make -C Projeto
