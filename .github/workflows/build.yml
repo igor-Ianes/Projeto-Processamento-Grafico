@@ -15,7 +15,14 @@ jobs:
       - name: Instalar dependências
         run: |
           sudo apt update
-          sudo apt install -y build-essential libglfw3-dev libgl1-mesa-dev
+          sudo apt install -y \
+          build-essential \
+          libglfw3-dev \
+          libgl1-mesa-dev \
+          libxi-dev \
+          libxrandr-dev \
+          libxinerama-dev \
+          libxcursor-dev
 
       - name: Compilar projeto
         run: make -C Projeto
