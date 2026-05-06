@@ -2,7 +2,7 @@
 // Licensed under the MIT License.
 
 #include "OpenGL.hpp"
-#include "Graphics3d.hpp"
+#include "graphics3d.hpp"
 #include "Scene.hpp"
 #include "TextureManager.hpp"
 #include "Graphics.hpp"
@@ -25,16 +25,15 @@ void Graphics3d::Init(InputManager *in, Timer *t)
 
     // criar câmeras
     Camera cam1;
-    cam1.position = {0, 10, -65}; // era 10 e depois 40
+    cam1.position = {0, 15, -65};
 
     Camera cam2;
-    cam2.position = {0, 10, 300}; //  {10, 5, 10};
-    cam2.yaw = 3.14f;             // 180 graus, olhando para o centro da cena
+    cam2.position = {0, 10, 150};
 
     Camera cam3;
-    cam3.position = {-75, 20, -45}; // {0, 10, 20};
+    cam3.position = {-75, 20, -45};
     cam3.yaw = -0.4f;
-    cam3.pitch = 0.5f; // -0.5f; pra cima
+    cam3.pitch = 0.5f;
 
     cameras.push_back(cam1);
     cameras.push_back(cam2);
@@ -113,17 +112,6 @@ void Graphics3d::Init(InputManager *in, Timer *t)
     renderer.Init(800, 600);
     renderer.SetProjection(matProj);
 
-    // OBJETOS TESTE
-
-    // arrega modelo de Teapot
-    // scene.AddObject("Assets/teapot.obj", {0, 0, 8});
-
-    // Carrega modelo de com que suporta textura
-    // scene.AddObject("Assets/cuboTextura.obj", {3, 0, 8});
-
-    // carrega textura
-    // GLuint tex = TextureManager::LoadTexture("Assets/Textura.png");
-
     /* ******** montagem da cena de demonstracao ******** */
 
     // carrega modelo de planicie montanhosa
@@ -142,11 +130,20 @@ void Graphics3d::Init(InputManager *in, Timer *t)
     scene.AddObject("Assets/asaEsquerda.obj", {-60, 30, 120});
     scene.AddObject("Assets/asaDireita.obj", {-60, 30, 120});
 
+    scene.AddObject("Assets/luasemtopo.obj", {0, -30, 350});
+    scene.AddObject("Assets/antena.obj", {0, -30, 350});
+    scene.AddObject("Assets/bandeiraBrasileira.obj", {-40, -20, 300});
+
+    scene.AddObject("Assets/gatoLaranja.obj", {0, -30, 300});
+
     // carrega textura do dragao
     GLuint tex = TextureManager::LoadTexture("Assets/TextureDragon.png");
     GLuint tex2 = TextureManager::LoadTexture("Assets/TextureDragonBlue.png");
     GLuint tex3 = TextureManager::LoadTexture("Assets/TextureDragonGreen.png");
-    GLuint tex4 = TextureManager::LoadTexture("Assets/grama.JPG");
+    GLuint tex4 = TextureManager::LoadTexture("Assets/grama.jpg");
+    GLuint tex5 = TextureManager::LoadTexture("Assets/metal.jpg");
+    GLuint tex6 = TextureManager::LoadTexture("Assets/brasil.png");
+    GLuint tex7 = TextureManager::LoadTexture("Assets/cat_diffuse.jpg");
 
     if (tex == 0)
         std::cout << "FALHA AO CARREGAR TEXTURA\n";
@@ -166,8 +163,16 @@ void Graphics3d::Init(InputManager *in, Timer *t)
 
     scene.objects[0].textureID = tex4;
 
-    scene.objects[2].parent = &scene.objects[1]; // asa esquerda → corpo
-    scene.objects[3].parent = &scene.objects[1]; // asa direita → corpo
+    scene.objects[10].textureID = tex5;
+    scene.objects[11].textureID = tex5;
+    scene.objects[12].textureID = tex6;
+
+    scene.objects[13].textureID = tex7;
+
+    /* **** define parentesco dos objetos **** */
+
+    scene.objects[2].parent = &scene.objects[1]; // asa esquerda filha de corpo
+    scene.objects[3].parent = &scene.objects[1]; // asa direita filha de corpo
 
     // segundo dragão
     scene.objects[5].parent = &scene.objects[4];
@@ -176,6 +181,10 @@ void Graphics3d::Init(InputManager *in, Timer *t)
     // terceiro dragão
     scene.objects[8].parent = &scene.objects[7];
     scene.objects[9].parent = &scene.objects[7];
+
+    scene.objects[11].parent = &scene.objects[10];
+
+    /* **** define posicao inicial dos objetos **** */
 
     // primeiro dragão
     scene.objects[2].position = {0, 0, 0}; // esquerda
@@ -190,8 +199,32 @@ void Graphics3d::Init(InputManager *in, Timer *t)
     scene.objects[8].position = {0, 0, 0};
     scene.objects[9].position = {0, 0, 0};
 
+    // modulo lunar
+    scene.objects[11].position = {0, 0, 0};
+    scene.objects[10].rotX = -1.5f;
+    scene.objects[10].rotZ = 2.5f;
+
+    // bandeira
+    scene.objects[12].rotY = 2.5f;
+
+    // gato
+    scene.objects[13].rotZ = 0.0f;
+    scene.objects[13].rotY = 3.14f;
+    scene.objects[13].rotX = 1.5f;
+
+    /* ******* define escala inicial dos objetos ******* */
+
     // define tamanho montanha
-    scene.objects[0].scale = {5.0f, 2.0f, 5.0f}; // padrao {5.0f, 5.0f, 5.0f}
+    scene.objects[0].scale = {5.0f, 2.0f, 5.0f};
+
+    // define tamanho modulo
+    scene.objects[10].scale = {0.1f, 0.1f, 0.1f};
+
+    // define tamanho bandeira
+    scene.objects[12].scale = {0.7f, 0.7f, 0.7f};
+
+    // define tamanho gato
+    scene.objects[13].scale = {0.5f, 0.5f, 0.5f};
 
     // salva posicao inicial dos objetos para usar como referencia em animacoes
     for (auto &obj : scene.objects)
@@ -429,8 +462,8 @@ void Graphics3d::EngineAnimation(float dt)
 
     /* ******* Rotacao atomatica do cenario ******* */
 
-    Object3D &rotObj = scene.objects[0];
-    rotObj.rotY += 0.4f * dt;
+    // Object3D &rotObj = scene.objects[0];
+    // rotObj.rotY += 0.4f * dt;
 
     /* **************** orbita para objetos **************** */
 
@@ -468,5 +501,21 @@ void Graphics3d::EngineAnimation(float dt)
         wingL.rotZ = -wave * amplitude;
     }
 
-    /* ************** Animacao asas *************** */
+    /* ************** Animacao modulo *************** */
+
+    Object3D &satelite = scene.objects[11];
+
+    float spinSpeed = 2.0f;
+
+    // gira só no eixo local
+    satelite.rotZ += spinSpeed * dt;
+
+    /* ************** Animacao bandeira *************** */
+
+    Object3D &bandeira = scene.objects[12];
+
+    float amplitude = 0.35f; // 20 graus
+    float speed = 1.0f;      // velocidade
+
+    bandeira.rotY = 2.5f + sin(time * speed) * amplitude;
 }
