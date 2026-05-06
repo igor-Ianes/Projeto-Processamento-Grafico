@@ -2,7 +2,7 @@
 // Licensed under the MIT License.
 
 #include "OpenGL.hpp"
-#include "graphics3d.hpp"
+#include "Graphics3d.hpp"
 #include "Scene.hpp"
 #include "TextureManager.hpp"
 #include "Graphics.hpp"
