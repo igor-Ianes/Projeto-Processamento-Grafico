@@ -199,11 +199,17 @@ Alguns exemplos da engine em execução:
 </p>
 <p align="center"><em>Demonstrações de escala e rotação aplicadas à cena</em></p>
 
+### Cena Final
+<p align="center">
+  <img src="Images/cenaFinalDragoes.gif" width="60%" />
+</p>
+<p align="center"><em>Cena final com adição do modulo, bandeira e gato</em></p>
+
 ## Controles
 
 A seguir seguem todos os controles da engine.
 
-- `W, A, D, S, F, G`: Movimentação da camera.
+- `W, A, D, S, F, G, SHIFT, SPACE`: Movimentação da camera.
 - `↑ ↓ ← →`: movimentação do objeto selecionado.
 - `M, N, B, V`: movimentação do objeto selecionado no proprio eixo.
 - `1, 2, 3, 4, -, +`: Redimensionamento do objeto selecionado.
